@@ -2,7 +2,7 @@
     <div class="tabbar">
         <div class="tab">
             <div class='left'><slot name='left'>热门推荐</slot></div>
-            <div class='center'><slot name='center'>更多 ></slot></div>
+            <div class='center' @click="moreClick"><slot name='center'>更多 ></slot></div>
         </div>
         <table>
             <tr class='tab-bottom' v-for='(item,index) in animations' :key='index' >
@@ -20,10 +20,15 @@ export default {
     data() {
         return {
             animations: [
-                {title:'图片1', src: require('assets/img/0.jpg')},
-                {title:'图片2', src: require('assets/img/1.jpg')},
-                {title:'图片3', src: require('assets/img/2.jpg')}
+                {title:'图片1', src: require('assets/img/4.jpg')},
+                {title:'图片2', src: require('assets/img/5.jpg')},
+                {title:'图片3', src: require('assets/img/6.jpg')}
             ]
+        }
+    },
+    methods: {
+        moreClick(){
+            this.$router.push('/more')
         }
     },
 }

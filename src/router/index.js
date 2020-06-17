@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 const Login = () => import('views/login/Login')
 const TabBar =() => import('components/common/tabbar/TabBar')
-const Index =() => import('views/index')
+const Index =() => import('views/home/Index')
+const MoreAnimation =() => import('views/more/MoreAnimation')
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,10 @@ const routes = [
         path: '/tabbar',
         component: TabBar
     },
+    {
+        path: '/more',
+        component: MoreAnimation
+    }
     
 ]
 
